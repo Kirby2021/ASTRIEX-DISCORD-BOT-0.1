@@ -45,14 +45,35 @@ client.on("ready", () => {
 
 })
 //__________________________________________________________________________
+
+
+
  const { MessageEmbed } = require('discord.js');
-
+ 
 client.on('message', async message => {
-
+  const mentionRegex = RegExp(`^<@!?${client.user.id}> help$`);0
 	
 	  
   
     if(message.author.bot) return;
+
+      if (!message.guild || message.author.bot) return;
+
+      
+     if (message.content.match(mentionRegex)) {
+           const prefix1 = new MessageEmbed()
+           .setTitle(`My prefix is \`\`\`a!\`\`\``)
+          .setFooter(client.user.username, client.user.displayAvatarURL())
+            .setDescription( `**For more info**\n ➡️ a!help to list commands\n`)
+           
+           .setTimestamp()
+          
+            .setColor('#34ebe5')
+      await message.channel.send(prefix1).then(msg => msg.delete({timeout:5000}));
+
+      }
+
+
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
     if(!message.member) message.member = await message.guild.fetchMember(message);

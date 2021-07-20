@@ -77,7 +77,7 @@ const express = require('express');
 
 const app = express();
 
-const port = 3000 || 3001
+const port = 8926 || 7094
 
 app.get("/",(req,res) => {
     res.status(200).sendfile(path.join(__dirname, "..", "scoopy.xyz", "index.html"))

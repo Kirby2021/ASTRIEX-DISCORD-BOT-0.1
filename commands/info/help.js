@@ -25,32 +25,35 @@ module.exports = {
             .setTimestamp()
             .setFooter(message.author.username, message.author.displayAvatarURL)
             
-            .setDescription(`[ASTRIEX HELP COMMAND](https://discord.com/api/oauth2/authorize?client_id=866666448269213726&permissions=8589934591&scope=bot%20applications.commands)\nAstriex prefix is \a!
+            .setDescription(`[ASTRIEX HELP COMMAND](https://discord.com/api/oauth2/authorize?client_id=866666448269213726&permissions=8589934591&scope=bot%20applications.commands)\n**__Astriex is a multi-purpose bot etc__**\n**Astriex prefix is \a!**
             
-            
-INFO 
+
+**INFO**
 > \`\`\`help, ping, avatar, serverinfo, userinfo, snipe, translate, hack, say, math, urban, rank, math, membercount\`\`\`
 
 MODERATION COMMANDS
 > \`\`\`announce, kick, ban, mute, unmute, tempmute, warn, check-warn, resetwarns, addrole, removerole, antilink-on, anilink-off, afk, purge, lock, unlock\`\`\`
 
-FUN
+**FUN**
 > \`\`\`connect4, snakegame, hangman, tictactoe, trivia, weather, translate, text-art, suffle\`\`\`
 
-GIVEAWAY
+**GIVEAWAY**
 > \`\`\`gstart, gend, greroll\`\`\`
 
-IMAGE
+**IMAGE**
 > \`\`\`image, trigger, meme, kiss, hug, slap, punch, maps\`\`\`
 
 <:AstriexMusic:866690332925100123> MUSIC
 > \`\`\`clear-queue, loop, lyrics, nowplaying, pause, play, queue, resume, shuffle, skip, stop\`\`\`
 
-CHATBOT
+**CHATBOT**
 > \`\`\`setchatbot, disablechatbot\`\`\`
 
-BOT-INFO
-> \`\`\`botinfo, uptime, detail \`\`\`\n[invite me](https://discord.com/api/oauth2/authorize?client_id=866666448269213726&permissions=8589934591&scope=bot%20applications.commands) | [support server](https://discord.gg/X7Jc6FDhFw)
+**BOT-INFO**
+> \`\`\`botinfo, uptime, detail \`\`\`
+
+**LINKS**
+[invite me](https://discord.com/api/oauth2/authorize?client_id=866666448269213726&permissions=8589934591&scope=bot%20applications.commands) | [support server](https://discord.gg/X7Jc6FDhFw)
 `) 
 
     await message.channel.send(embed)
