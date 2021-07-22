@@ -53,7 +53,7 @@ MODERATION COMMANDS
 > \`\`\`botinfo, uptime, detail \`\`\`
 
 **LINKS**
-[invite me](https://discord.com/api/oauth2/authorize?client_id=866666448269213726&permissions=8589934591&scope=bot%20applications.commands) | [support server](https://discord.gg/X7Jc6FDhFw)
+[invite me](https://discord.com/oauth2/authorize?client_id=819421344813809685&scope=bot%20applications.commands&permissions=8589934591) | [support server](https://discord.gg/X7Jc6FDhFw)
 `) 
 
     await message.channel.send(embed)
