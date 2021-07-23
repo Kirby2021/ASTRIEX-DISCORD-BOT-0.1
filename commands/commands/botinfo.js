@@ -34,7 +34,7 @@ module.exports = {
 				{
                     name: 'Developers',
 					description: 'none',
-                    value: '`VISHAL#5693 MONSTER#1234 CPTN#6684`',
+                    value: '\`\`\`VISHAL#1010\`\`\`',
                     inline: true
                 },
             )
