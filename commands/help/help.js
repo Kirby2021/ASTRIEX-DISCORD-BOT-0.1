@@ -25,7 +25,7 @@ module.exports = {
             .setTimestamp()
             .setFooter(message.author.username, message.author.displayAvatarURL)
             
-            .setDescription(`[ASTRIEX HELP COMMAND](https://discord.com/api/oauth2/authorize?client_id=866666448269213726&permissions=8589934591&scope=bot%20applications.commands)\n**__Astriex is a multi-purpose bot etc__**\n**Astriex prefix is \a!**
+            .setDescription(`[ASTRIEX HELP COMMAND](https://discord.com/oauth2/authorize?client_id=819421344813809685&scope=bot%20applications.commands&permissions=8589934591)\n**__Astriex is a multi-purpose bot etc__**\n**Astriex prefix is \a!**
             
 
 **INFO**
