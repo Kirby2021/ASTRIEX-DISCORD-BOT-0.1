@@ -4,7 +4,7 @@ const cpuStat = require("cpu-stat");
 const moment = require("moment");
 
 module.exports = {
-    name: "ping",
+    name: "adv-ping",
     timeout: 1,
     description: "Get information about the bot",
     usage: "",
