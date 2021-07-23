@@ -44,7 +44,7 @@ MODERATION COMMANDS
 > \`\`\`image, trigger, meme, kiss, hug, slap, punch, maps\`\`\`
 
 <:AstriexMusic:866690332925100123> MUSIC
-> \`\`\`clear-queue, loop, lyrics, nowplaying, pause, play, queue, resume, shuffle, skip, stop\`\`\`
+> \`\`\`play, pause, queue, remove, resume, search [song], shuffle, skip, skipto, volume, youtube , nowplaying, clear, search, bassboost <none | low | medium | high>, loop, loopqueue, lyrics, disconnect, grab, seek <time s/m/h>\`\`\`
 
 **CHATBOT**
 > \`\`\`setchatbot, disablechatbot\`\`\`
