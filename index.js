@@ -2,6 +2,7 @@ const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
 const fetch = require("node-fetch");
 const db =require("quick.db");
+
 const client = new Client({
     disableEveryone: true,
 	
@@ -17,6 +18,7 @@ const config = require('./config.json')
 const prefix = config.prefix
 const ms = require('ms')
 const token = config.token
+const server12 = config.server12
 
 //___________________________________________________________________________                          CLIENTS
 
@@ -53,7 +55,15 @@ client.on("ready", () => {
 client.on('message', async message => {
   const mentionRegex = RegExp(`^<@!?${client.user.id}> help$`);0
 	
-	  
+  if(message.channel.id === 852508781543030817){
+    if(message.content.startsWith(`help`) || message.content.startsWith(`help`)) return 
+    (message.channel.send("for help pls make a ticket")).then
+    console.log("hi")
+      message.delete()
+  
+  
+  }
+  
   
     if(message.author.bot) return;
 
@@ -73,7 +83,7 @@ client.on('message', async message => {
 
       }
 
-
+ 
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
     if(!message.member) message.member = await message.guild.fetchMember(message);
@@ -141,6 +151,15 @@ client.giveaways = new GiveawaysManager(client, {
 //const word = require('./JSON/word.json')
 client.on("message", async message => {
 
+  
+
+
+
+
+
+
+
+
 
    
 		 const alusm =  message.member
@@ -157,6 +176,9 @@ let sChannel = db.fetch(`links_${message.guild.id}`);
 message.delete()
 alusm.send(" :x: no link allowed")
 
+////////////////////////////////////////////////////////////////////////
+
+
 }
 
  }
@@ -164,8 +186,15 @@ alusm.send(" :x: no link allowed")
 })
 
 ////////////////////////////////////////////////////////////////////
-			
-			
+
+  
+
+
+
+
+//client.on ("message", {message} => {
+
+//})
 			
 			
 
@@ -177,26 +206,9 @@ const alexa = require("alexa-bot-api");
 var chatbot = new alexa("chat bot api");
 
 client.on("message", async message => {
-        let sChannel = db.fetch(`chatbot_${message.guild.id}`);
-        if (sChannel === null) {
-            return;
-          }
-            if (message.author.bot && message.author.discriminator !== '0000') return;
-            if(message.channel.id === sChannel){
-                if (message.author.bot) return;
-message.content = message.content.replace(/@(everyone)/gi, "everyone").replace(/@(here)/gi, "here");
-if (message.content.includes(`@`)) {
-return message.channel.send(`**:x: Please dont mention anyone**`);
- }
-message.channel.startTyping();
-if (!message.content) return message.channel.send("Please say something.");
-fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=Vishal`)
-    .then(res => res.json())
-    .then(data => {
-    message.channel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
-    });
-      message.channel.stopTyping();
-}
+       
+       
+
 });
 
 
@@ -213,7 +225,7 @@ const { addexp } = require("./handlers/xp.js")
 //LEVEL
 client.on("message", async message => {
  
-if(message.author.bot) return;
+  if(message.author.bot) return;
   if(!message.guild) return;
   
 return addexp(message)
