@@ -2,7 +2,6 @@ const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
 const fetch = require("node-fetch");
 const db =require("quick.db");
-
 const client = new Client({
     disableEveryone: true,
 	
@@ -18,7 +17,6 @@ const config = require('./config.json')
 const prefix = config.prefix
 const ms = require('ms')
 const token = config.token
-const server12 = config.server12
 
 //___________________________________________________________________________                          CLIENTS
 
@@ -55,14 +53,6 @@ client.on("ready", () => {
 client.on('message', async message => {
   const mentionRegex = RegExp(`^<@!?${client.user.id}> help$`);0
 	
-  if(message.channel.id === 852508781543030817){
-    if(message.content.startsWith(`help`) || message.content.startsWith(`help`)) return 
-    (message.channel.send("for help pls make a ticket")).then
-    console.log("hi")
-      message.delete()
-  
-  
-  }
   
   
     if(message.author.bot) return;
@@ -153,15 +143,6 @@ client.on("message", async message => {
 
   
 
-
-
-
-
-
-
-
-
-   
 		 const alusm =  message.member
 ///////////////////////////////////////////////////////////
 let sChannel = db.fetch(`links_${message.guild.id}`);
@@ -177,8 +158,6 @@ message.delete()
 alusm.send(" :x: no link allowed")
 
 ////////////////////////////////////////////////////////////////////////
-
-
 }
 
  }
