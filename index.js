@@ -119,7 +119,7 @@ client.on('message', async message => {
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb+srv://astriex:astriex1botJAVA@astriex.jk1bm.mongodb.net/Data',{
+mongoose.connect(process.env.mongoose,{
     useUnifiedTopology : true,
     useNewUrlParser: true,
 }).then(console.log('Connected to mongo db!'))
