@@ -5,6 +5,7 @@
 </div>
 
 ### If you are you need support on the codes feel free to join the support server!
+  LINK = https://discord.gg/kMCpgYUAMV
 
 
 # A COOL MULTI-PURPOSE BOT
