@@ -13,7 +13,7 @@ class Util {
     else return level;
     }
 
-  //mongodb+srv://astriex:astriex1botJAVA@astriex.jk1bm.mongodb.net/Data
+ 
   static getLevelxp(level) {
     return 5 * Math.pow(level, 2) + 50 * level + 100;
   }
