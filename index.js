@@ -3,7 +3,8 @@ const fs = require('fs')
 const fetch = require("node-fetch");
 const db =require("quick.db");
 const client = new Client({
-    disableEveryone: true,
+  intents: 32767,
+  disableEveryone: true,
 	
 	
 })
@@ -24,7 +25,12 @@ client.commands = new Collection();
 client.snipes = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
+client.commands = new Collection();
+client.slashCommands = new Collection();
+client.config = require("./config.json");
 
+// Initializing the project
+require("./handler")(client);
 
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
@@ -195,7 +201,7 @@ client.on("message", async message => {
 
 
 ////////////////////////////////////////////////
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////
 
@@ -232,4 +238,4 @@ for (const file of commandFiles) {
 
 
 
-client.login(token);
+client.login(process.env.token);
