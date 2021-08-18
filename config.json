@@ -1,5 +1,5 @@
 {
-    "token": "ODE5NDIxMzQ0ODEzODA5Njg1.YEmXmA.myYt270OECLuPTuHI5YrmNstMwY",
+    "token": Process.env.token,
     "prefix": "a!",
     "server12": "852508781543030817"
 }
